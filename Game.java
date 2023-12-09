@@ -9,7 +9,11 @@ public class Game {
 
     boolean check=false;
     char player=' ';
-
+    public static void main(String[] args) {
+        System.out.println("  Welcome to TicTacToe");
+        Game nn= new Game();
+        nn.startGame();
+    }
     Game()
     {
         for(int i=0;i<ROWS;i++)
