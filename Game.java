@@ -1,3 +1,5 @@
+package TicTacToe;
+
 public class Game {
 
     public static final int ROWS = 3, COLS = 3;
