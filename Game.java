@@ -10,11 +10,6 @@ public class Game {
     boolean check=false;
     char player=' ';
 
-        public static void main(String[] args) {
-            System.out.println("Hello world!");
-           new Game();
-        }
-
     Game()
     {
         for(int i=0;i<ROWS;i++)
@@ -43,6 +38,16 @@ public class Game {
             System.out.println(" DRAW ");
         }
     }
+    public void setGame()
+    {
+        for(int i=0;i<ROWS;i++)
+        {
+            for(int j=0;j<COLS;j++)
+            {
+                board[i][j]=' ';
+            }
+        }
+    }
     private void loadBoard()
     {
 
@@ -60,7 +65,7 @@ public class Game {
         }
 
     }
-    private void play()
+    protected void play()
     {
         int row,col;
         Scanner in=new Scanner(System.in);
@@ -88,7 +93,7 @@ public class Game {
         loadBoard();
         return;
     }
-    private int checkGame()
+    protected int checkGame()
     {
 
         //checking row wise
@@ -132,5 +137,9 @@ public class Game {
 
         //continue playing
         return 0;
+    }
+
+    public char[][] getBoard() {
+        return board;
     }
 }
