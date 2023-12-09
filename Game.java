@@ -20,6 +20,10 @@ public class Game {
             }
         }
         loadBoard();
+
+    }
+    public void startGame()
+    {
         int ans=0;
         while(ans==0)
         {
@@ -38,13 +42,13 @@ public class Game {
             System.out.println(" DRAW ");
         }
     }
-    public void setGame()
+    public void setBoard(char b[][])
     {
         for(int i=0;i<ROWS;i++)
         {
             for(int j=0;j<COLS;j++)
             {
-                board[i][j]=' ';
+                board[i][j]=b[i][j];
             }
         }
     }
@@ -65,7 +69,7 @@ public class Game {
         }
 
     }
-    protected void play()
+    public char[][] play()
     {
         int row,col;
         Scanner in=new Scanner(System.in);
@@ -91,7 +95,7 @@ public class Game {
 
         board[row][col]=player;
         loadBoard();
-        return;
+        return board;
     }
     protected int checkGame()
     {
